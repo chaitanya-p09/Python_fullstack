@@ -6,5 +6,23 @@ let msg=document.getElementById("message")
 msg.innerHTML="javascript is fun"
 console.log("message element:",msg)
 function showmessage(){
-    alert("welcome to NRIIT LEARNING MANAGEMENT SYSTEM")
+    alert("welcome to NRIIT LEARNING MANAGEMENT SYSTEM")}
+function changeHeading(){
+    document.getElementById("welcome").innerHTML="welcome python fullstack developers"}
+    let heading1=document.querySelector("#welcome");
+    console.log("heading element:",heading)
+    let button=document.getElementById("btnGreeting");
+    button.addEventListener("click",function(){
+        alert("welcome to javascript event handling")
+    });
+    let registerForm=document.getElementById("registerForm");
+    registerForm.addEventListener("submit",function(event){
+        event.preventDefault();
+        let name=document.getElementById("name").Value;
+        let email=document.getElementById("email").Value;
+        let password=document.getElementById("passwor").value;
+        if(!name || !email || !password){alert("Please fill in all fields.");
+            return;
+        }
+    alert("Registration succesful!");
 }
