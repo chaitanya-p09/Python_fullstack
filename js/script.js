@@ -16,7 +16,7 @@ function changeHeading(){
         alert("welcome to javascript event handling")
     });
     let registerForm=document.getElementById("registerForm");
-    registerForm.addEventListener("submit",function(event){
+    registerForm.addEventListener("submit",function(event)){
         event.preventDefault();
         let name=document.getElementById("name").Value;
         let email=document.getElementById("email").Value;
@@ -26,3 +26,10 @@ function changeHeading(){
         }
     alert("Registration succesful!");
 }
+//write a function to square a number
+//write a function to odd or even number
+functionsquareNumber(num){
+    return num*num ;
+}
+x=squareNumber(5);
+console.log('square of 5 is: $x')

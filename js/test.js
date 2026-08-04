@@ -32,5 +32,23 @@ let student={
 console.log("student details: ",student)
 function greetstudent(name){
     console.log("hello " +name+ ",welcome to nriit learning management system")
-}
+
 greetstudent(student_name)
+}
+
+//write a function to square a number
+function squareNumber(num) {
+    return num*num ;
+ }
+x=squareNumber(5);
+console.log("square of 5 is:",x)
+//write a function to odd or even number
+function Number(num) {
+    if (num%2==0){
+        return "even";
+    }
+    else {
+        return "odd"
+    }
+}
+console.log("check 9 is even or odd:",Number(9));
