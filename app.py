@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,jsonify,request
 
 app=Flask(__name__)
 
@@ -14,11 +14,19 @@ def course():
 @app.route('/contact')
 def contact():
     return render_template("contact.html")
-@app.route('/register')
+@app.route('/register',methods=["POST","GET"])
 def register():
-    return render_template("register.html")
+    if request.method=="POST":
+        name=request.form["name"]
+        email=request.form["email"]
+        password=request.form["password"]
+        dob=request.form["dob"]
+        gender=request.form["gender"]
+        course=request.form["course"]
+        return render_template("register.html")
 @app.route('/trainers')
 def trainers():
     return render_template("trainers.html")
+
 if __name__=='__main__':
     app.run(debug=True)
